@@ -1,0 +1,151 @@
+.project {
+  color: #484848;
+
+  &__desc {
+    .row {
+      @media (max-width: 376px) {
+        flex-direction: column;
+      }
+
+      p {
+        margin-top: 0;
+      }
+    }
+
+    .name {
+      color: $color-green;
+      font-size: 30px;
+      text-transform: uppercase;
+      font-family: $font-helvetica-medium;
+      margin-right: 165px;
+      flex-shrink: 0;
+
+      @media (max-width: 992px) {
+        margin-right: 0;
+        text-align: center;
+      }
+
+      @media (max-width: 376px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .item {
+      @media (max-width: 992px) {
+        flex-basis: 50%;
+      }
+    }
+
+    .desc {
+      font-size: 18px;
+      max-width: 575px;
+      line-height: 28px;
+    }
+  }
+
+  &__gallery {
+    padding: 24px 0;
+
+    .top {
+      display: flex;
+
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+      }
+
+      &__image {
+        height: 600px;
+        background: center/cover no-repeat;
+
+        @media (max-width: 768px) {
+          height: 350px;
+        }
+      }
+
+      .left {
+        flex-basis: calc(60% - 24px);
+        margin-right: 24px;
+
+        @media (max-width: 768px) {
+          flex-basis: 100%;
+          margin-right: 0;
+          margin-bottom: 24px;
+        }
+      }
+
+      .right {
+        flex-basis: 30%;
+        flex-grow: 1;
+      }
+    }
+
+    .bottom {
+      height: 395px;
+      background: center/cover no-repeat;
+      margin-top: 24px;
+
+      @media (max-width: 768px) {
+        height: 350px;
+      }
+    }
+  }
+
+  &__details {
+
+    .container {
+      @media (max-width: 992px) {
+        text-align: center;
+      }
+    }
+
+    .row {
+      @media (max-width: 992px) {
+        flex-direction: column;
+        display: inline-flex;
+        text-align: left;
+      }
+    }
+
+    .item {
+      font-size: 18px;
+      flex-basis: 50%;
+
+      @media (min-width: 992px) {
+        padding-left: 24px;
+        border-left: 1px solid $color-green;
+      }
+
+      @media (max-width: 992px) {
+        &:first-child {
+          margin-bottom: 20px;
+        }
+      }
+
+
+
+      &__row {
+        display: flex;
+
+        &:not(:last-child) {
+          margin-bottom: 23px;
+        }
+
+        .left {
+          font-family: $font-helvetica-medium;
+          margin-right: 24px;
+          min-width: 140px;
+        }
+      }
+    }
+  }
+
+  &__button {
+    text-align: center;
+    padding: 75px 0 115px 0;
+    background: #fff;
+
+    @media (max-width: 576px) {
+      padding: 45px 0 65px;
+    }
+  }
+}

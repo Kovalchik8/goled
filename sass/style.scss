@@ -1,0 +1,15 @@
+@import '../node_modules/normalize-scss/sass/normalize.scss';
+@include normalize();
+
+@import 'base/_fonts.scss';
+@import 'base/_variables.scss';
+@import 'base/_global.scss';
+
+@import 'modules/_animate.scss';
+
+@import 'modules/_header.scss';
+@import 'modules/_home.scss';
+@import 'modules/_footer.scss';
+@import 'modules/_products.scss';
+@import 'modules/_project.scss';
+@import 'modules/_single-product.scss';

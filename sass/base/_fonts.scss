@@ -1,0 +1,34 @@
+$font-helvetica-neue: 'helvetica neue';
+
+@font-face {
+  font-family: $font-helvetica-neue;
+  src: url('fonts/HelveticaNeue.ttf');
+}
+
+$font-helvetica-light: 'helvetica light';
+
+@font-face {
+  font-family: $font-helvetica-light;
+  src: url('fonts/HelveticaNeueLight.ttf');
+}
+
+$font-helvetica-thin: 'helvetica thin';
+
+@font-face {
+  font-family: $font-helvetica-thin;
+  src: url('fonts/HelveticaNeue-Thin.ttf');
+}
+
+$font-helvetica-regular: 'helvetica regular';
+
+@font-face {
+  font-family: $font-helvetica-regular;
+  src: url('fonts/Helvetica.ttf');
+}
+
+$font-helvetica-medium: 'helvetica medium';
+
+@font-face {
+  font-family: $font-helvetica-medium;
+  src: url('fonts/HelveticaNeue-Medium.ttf');
+}

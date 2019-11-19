@@ -1,0 +1,34 @@
+.footer {
+  background: #252531;
+  padding: 60px 15px;
+
+  .social {
+    display: flex;
+    justify-content: center;
+
+    li {
+      &:not(:last-of-type) {
+        margin-right: 60px;
+      }
+
+      a {
+        opacity: .6;
+        padding: 3px;
+        transition: .3s;
+        display: inline-block;
+
+        &:hover {
+          opacity: 1;
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 35px;
+  }
+}
