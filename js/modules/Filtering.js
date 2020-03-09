@@ -3,8 +3,9 @@ class Filtering {
     this.loader = $('.products__loader')
     this.products_layout = $('.products__right')
     this.is_filter_running = false
-
     this.filter_data = {
+      action: 'get_filtered_items',
+      class: this.products_layout.attr('data-class'),
       category: [],
       color: [],
       size: [],
@@ -13,7 +14,6 @@ class Filtering {
       cct: [],
       cri: []
     }
-
     this.filter_items = $('.filter__list li')
     this.events()
   }
@@ -56,19 +56,7 @@ class Filtering {
     this.loader.addClass('visible')
     this.is_filter_running = true
 
-    var ajax_data = {
-      action: 'get_filtered_items',
-      class: this.products_layout.attr('data-class'),
-      category: this.filter_data.category,
-      size: this.filter_data.size,
-      physical: this.filter_data.physical,
-      watts: this.filter_data.watts,
-      cct: this.filter_data.cct,
-      cri: this.filter_data.cri,
-      color: this.filter_data.color
-    }
-
-    $.post(GoledData.admin_ajax, ajax_data, result => {
+    $.post(GoledData.admin_ajax, this.filter_data, result => {
       var result = JSON.parse(result)
 
       if (result.products.length) {
